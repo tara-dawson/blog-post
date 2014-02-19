@@ -12,7 +12,7 @@ class Comment implements Comparable {
 	Date dateCreated
 	
 	public int compareTo(Object o) {
-		return dateCreated.compareTo(o.dateCreated)
+		return o.dateCreated.compareTo(dateCreated)
 	}
 
     static constraints = {

@@ -32,13 +32,9 @@ class PostController {
 		return post
 	}
 	
-	def remoteSearch = {
-		def posts = Post.findAllByTitleLike("${params.value}%")
-		render(template:'results', model: [value: params.value, posts: posts])
-	}
-	
 	def search = {
-		render(view:'search')
+		def posts = Post.findAllByTitleLike("${params.value}%")
+		render(template:'list-post', model: ['postInstanceList': posts])
 	}
 
     def scaffold = true

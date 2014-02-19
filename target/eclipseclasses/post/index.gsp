@@ -6,44 +6,31 @@
 		<meta name="layout" content="main">
 		<g:set var="entityName" value="${message(code: 'post.label', default: 'Post')}" />
 		<title><g:message code="default.list.label" args="[entityName]" /></title>
+		<g:javascript library="jquery"/>
 	</head>
 	<body>
-	  <h1>Blog Posts</h1>
-		<a href="#list-post" class="skip" tabindex="-1"><g:message code="default.link.skip.label" default="Skip to content&hellip;"/></a>
+	  <h1 style="font-size:30px; font-weight:bold">Posts</h1>
 		<div class="nav" role="navigation">
 			<ul>
 				<li><a class="home" href="${createLink(uri: '/')}"><g:message code="default.home.label"/></a></li>
 				<li><g:link class="create" action="create"><g:message code="default.new.label" args="[entityName]" /></g:link></li>
 			</ul>
 		</div>
+		<div class="search">
+		<g:formRemote name="search"
+		url="[controller:'post',action:'search']"
+		update="list-post">
+		<div class="form-group">
+		<input type="text" name="value" value="${value}"/>
+		<g:submitButton name="Search"/>
+		</div>
+		</g:formRemote>
+		</div>
 		<div id="list-post" class="content scaffold-list" role="main">
-			<h1><g:message code="default.list.label" args="[entityName]" /></h1>
 			<g:if test="${flash.message}">
 				<div class="message" role="status">${flash.message}</div>
 			</g:if>
-				
-				<g:each in="${postInstanceList}" status="i" var="postInstance">
-					<g:link action="show" id="${postInstance.id}">${fieldValue(bean: postInstance, field: "title")}</g:link><br/>
-					
-						Author: ${fieldValue(bean: postInstance, field: "author")}<br/>
-					
-						${fieldValue(bean: postInstance, field: "subject")}<br/>
-											
-						${fieldValue(bean: postInstance, field: "content")}<br/>
-
-						Last Updated: <g:formatDate date="${postInstance.lastUpdated}" /><br/>
-					
-						Published: <g:formatBoolean boolean="${postInstance.published}" /><br/>
-						
-						<g:link controller="post" action="edit" id="${postInstance.id}">
-  							Edit this post<br/>
-						</g:link><br/>
-					
-				</g:each>
-			</table>
-			<div class="pagination">
-				<g:paginate total="${postInstanceCount ?: 0}" />
-			</div>
+			<g:render template="/post/list-post" model="['postInstanceList':postInstanceList]"/>
 		</div>
 	</body>
 </html>

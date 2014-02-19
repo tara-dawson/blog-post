@@ -5,7 +5,7 @@ class BootStrap {
     def init = { servletContext ->
 		
 	new Post(title:"Testing A Post Title",
-			teaser:"blogging",
+			subject:"blogging",
 			content:"This is a blog post created by me.",
 			published:true).save()
  
