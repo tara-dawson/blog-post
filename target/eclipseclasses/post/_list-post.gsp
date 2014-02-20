@@ -1,5 +1,5 @@
 <g:each in="${postInstanceList}" status="i" var="postInstance">
-	<g:link action="show" id="${postInstance.id}">
+	<g:link action="show" id="${postInstance.id}" params="[year:postInstance.lastUpdated.format('yyyy'), month:postInstance.lastUpdated.format('MM'), title:postInstance.title]">
 		${fieldValue(bean: postInstance, field: "title")}
 	</g:link>
 	<br />

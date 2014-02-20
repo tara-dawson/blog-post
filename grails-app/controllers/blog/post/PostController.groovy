@@ -36,6 +36,11 @@ class PostController {
 		def posts = Post.findAllByTitleLike("${params.value}%")
 		render(template:'list-post', model: ['postInstanceList': posts])
 	}
+	
+	def show = {
+		def post = Post.get(params.id)
+		render(view:'show', model:['postInstance':post])
+	}
 
     def scaffold = true
 }

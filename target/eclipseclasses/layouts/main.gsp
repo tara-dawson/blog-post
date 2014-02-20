@@ -19,7 +19,7 @@
 		<r:layoutResources />
 	</head>
 	<body>
-		<div id="grailsLogo" role="banner"><h1 style="font-size:40px; font-weight:bold">Tara's Blog</h1></div>
+		<div id="grailsLogo" role="banner"><h1 style="font-size:40px; font-weight:bold;">Tara's Blog</h1></div>
 		<g:layoutBody/>
 		<div class="footer" role="contentinfo"></div>
 		<div id="spinner" class="spinner" style="display:none;"><g:message code="spinner.alt" default="Loading&hellip;"/></div>
