@@ -1,9 +1,12 @@
 <g:each in="${comments}" var="comment">
 <h3>
-${comment.author}:
+Author:
+${comment.author}
 </h3>
 <p>
-${comment.comment}:
+Comment:
+${comment.comment}
 </p>
-<g:formatDate date="${comment.dateCreated}" type="datetime" format="MEDIUM"/>
+Posted: 
+<g:formatDate date="${comment.dateCreated}" type="datetime" format="MEDIUM"/><br><br>
 </g:each>

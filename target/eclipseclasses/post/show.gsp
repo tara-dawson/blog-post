@@ -38,16 +38,17 @@
 		
 
 		<g:if test="${postInstance?.author}">
-
+		<label>Author: </label>
 			<span class="property-value" aria-labelledby="author-label"><g:fieldValue
-					bean="${postInstance}" field="author" /></span>
+			
+					bean="${postInstance}" field="author" /></span><br>
 
 		</g:if>
 
 		<g:if test="${postInstance?.subject}">
-
+		<label>Subject: </label>
 			<span class="property-value" aria-labelledby="subject-label"><g:fieldValue
-					bean="${postInstance}" field="subject" /></span>
+					bean="${postInstance}" field="subject" /></span><br>
 
 		</g:if>
 
@@ -60,19 +61,21 @@
 		</g:if>
 
 		<g:if test="${postInstance?.lastUpdated}">
-
+		<label>Last Updated: </label>
 			<span class="property-value" aria-labelledby="lastUpdated-label"><g:formatDate
-					date="${postInstance?.lastUpdated}" type="datetime" format="SHORT"/></span>
+					date="${postInstance?.lastUpdated}" type="datetime" format="SHORT"/></span><br>
 
 		</g:if>
 
 		<g:if test="${postInstance?.published}">
-
+		<label>Published?: </label>
 			<span class="property-value" aria-labelledby="published-label"><g:formatBoolean
-					boolean="${postInstance?.published}" /></span>
+					boolean="${postInstance?.published}" /></span><br><br>
 
 		</g:if>
-
+		<h3>
+		<label>Leave A Comment: </label><br><br>
+		</h3>
 		<g:formRemote name="Comments"
 			url="[controller:'comment', action: 'newComment']"
 			update="comments">
@@ -80,12 +83,12 @@
 			<input type="hidden" name="url" value=""/>
 			<input type="hidden" name="email" value=""/>
 			<label>Author: </label>
-			<input type='text' name='author' value="${author}" /><br>
+			<input type='text' name='author' value="${author}" /><br><br>
 			<label>Comment: </label>
 			<textarea name='comment' rows="2" value="${comment}">
 			</textarea><br>
 			<g:submitButton name="Submit" />
-		</g:formRemote>
+		</g:formRemote><br><br>
 
 	<div id="comments"><g:render template="/comment/comments" model="['comments':postInstance?.comments]"/>
 	</div>
