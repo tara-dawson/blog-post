@@ -23,7 +23,7 @@
 				</g:link></li>
 		</ul>
 	</div>
-	<div id="show-post" class="content scaffold-show" role="main">
+	<div id="show-post" class="content scaffold-show transparent" role="main">
 		<g:if test="${postInstance?.title}">
 
 			<h2>
@@ -73,9 +73,9 @@
 					boolean="${postInstance?.published}" /></span><br><br>
 
 		</g:if>
-		<h3>
+		<h4>
 		<label>Leave A Comment: </label><br><br>
-		</h3>
+		</h4>
 		<g:formRemote name="Comments"
 			url="[controller:'comment', action: 'newComment']"
 			update="comments">

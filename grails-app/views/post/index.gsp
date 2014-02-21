@@ -1,4 +1,3 @@
-
 <%@ page import="blog.post.Post" %>
 <!DOCTYPE html>
 <html>

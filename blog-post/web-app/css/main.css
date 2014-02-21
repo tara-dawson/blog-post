@@ -42,20 +42,20 @@ body {
 	margin: 0 auto;
 	max-width: 960px;
 	overflow-x: hidden; /* prevents box-shadow causing a horizontal scrollbar in firefox when viewport < 960px wide */
-	   -moz-box-shadow: 0 0 0.3em #255b17;
-	-webkit-box-shadow: 0 0 0.3em #255b17;
-	        box-shadow: 0 0 0.3em #255b17;
+	   -moz-box-shadow: 0 0 0.3em #00b7e5;
+	-webkit-box-shadow: 0 0 0.3em #00b7e5;
+	        box-shadow: 0 0 0.3em #00b7e5;
 }
 
 #grailsLogo {
-	background-color: #abbf78;
+	background-color: #00b7e5;
 }
 
 /* replace with .no-boxshadow body if you have modernizr available */
 .ie6 body,
 .ie7 body,
 .ie8 body {
-	border-color: #255b17;
+	border-color: #00b7e5;
 	border-style: solid;
 	border-width: 0 1px;
 }
@@ -65,7 +65,7 @@ body {
 }
 
 a:link, a:visited, a:hover {
-	color: #48802c;
+	color: #00b7e5;
 }
 
 a:hover, a:active {
@@ -73,7 +73,7 @@ a:hover, a:active {
 }
 
 h1 {
-	color: #48802c;
+	color: #00b7e5;
 	font-weight: normal;
 	font-size: 1.25em;
 	margin: 0.8em 0 0.3em 0;
@@ -108,8 +108,8 @@ img {
 }
 
 .footer {
-	background: #abbf78;
-	color: #000;
+	background: #00b7e5;
+	color: #00b7e5;
 	clear: both;
 	font-size: 0.8em;
 	margin-top: 1.5em;
@@ -118,7 +118,7 @@ img {
 }
 
 .footer a {
-	color: #255b17;
+	color: #00b7e5;
 }
 
 .spinner {
@@ -135,7 +135,7 @@ img {
 /* NAVIGATION MENU */
 
 .nav {
-	background-color: #efefef;
+	background-color: #00b7e5;
 	padding: 0.5em 0.75em;
 	   -moz-box-shadow: 0 0 3px 1px #aaaaaa;
 	-webkit-box-shadow: 0 0 3px 1px #aaaaaa;
@@ -158,7 +158,7 @@ img {
 }
 
 .nav a {
-	color: #666666;
+	color: #00b7e5;
 	display: block;
 	padding: 0.25em 0.7em;
 	text-decoration: none;
@@ -168,19 +168,19 @@ img {
 }
 
 .nav a:active, .nav a:visited {
-	color: #666666;
+	color: #00b7e5;
 }
 
 .nav a:focus, .nav a:hover {
 	background-color: #999999;
-	color: #ffffff;
+	color: #00b7e5;
 	outline: none;
 	text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.8);
 }
 
 .no-borderradius .nav a:focus, .no-borderradius .nav a:hover {
 	background-color: transparent;
-	color: #444444;
+	color: #00b7e5;
 	text-decoration: underline;
 }
 
@@ -225,7 +225,7 @@ fieldset,
 
 .fieldcontain label,
 .fieldcontain .property-label {
-	color: #666666;
+	color: #00b7e5;
 	text-align: right;
 	width: 25%;
 }
@@ -246,8 +246,8 @@ label {
 }
 
 input, select, textarea {
-	background-color: #fcfcfc;
-	border: 1px solid #cccccc;
+	background-color: #e5f9ff;
+	border: 1px solid #00b7e5;
 	font-size: 1em;
 	padding: 0.2em 0.4em;
 }
@@ -274,7 +274,7 @@ input[type=checkbox], input[type=radio] {
 }
 
 input:focus, select:focus, textarea:focus {
-	background-color: #ffffff;
+	background-color: #00b7e5;
 	border: 1px solid #eeeeee;
 	outline: 0;
 	   -moz-box-shadow: 0 0 0.5em #ffffff;
@@ -283,7 +283,7 @@ input:focus, select:focus, textarea:focus {
 }
 
 .required-indicator {
-	color: #48802C;
+	color: #00b7e5;
 	display: inline-block;
 	font-weight: bold;
 	margin-left: 0.3em;
@@ -336,11 +336,11 @@ fieldset.embedded legend {
 
 .message {
 	background: #f3f3ff;
-	border: 1px solid #b2d1ff;
-	color: #006dba;
-	   -moz-box-shadow: 0 0 0.25em #b2d1ff;
-	-webkit-box-shadow: 0 0 0.25em #b2d1ff;
-	        box-shadow: 0 0 0.25em #b2d1ff;
+	border: 1px solid #00b7e5;
+	color: #00b7e5;
+	   -moz-box-shadow: 0 0 0.25em #00b7e5;
+	-webkit-box-shadow: 0 0 0.25em #00b7e5;
+	        box-shadow: 0 0 0.25em #00b7e5;
 }
 
 .errors {
@@ -450,7 +450,7 @@ th a:link, th a:visited {
 }
 
 th a:hover, th a:focus {
-	color: #333333;
+	color: #00b7e5;
 }
 
 th.sortable a {
@@ -476,7 +476,7 @@ th.desc a {
 }
 
 th:hover, tr:hover {
-	background: #E1F2B6;
+	background: #00b7e5;
 }
 
 /* PAGINATION */
@@ -536,7 +536,7 @@ th:hover, tr:hover {
 .buttons a {
 	background-color: transparent;
 	border: 0;
-	color: #666666;
+	color: #00b7e5;
 	cursor: pointer;
 	display: inline-block;
 	margin: 0 0.25em 0;

@@ -37,8 +37,9 @@ html * {
 }
 
 body {
-	background: #ffffff;
-	color: #333333;
+	background: url(http://www.ourprg.com/wp-content/uploads/2012/08/snow_leopard-1280x720.jpg) no-repeat right center fixed;
+	background-color: #00b7e5;
+	color: black;
 	margin: 0 auto;
 	max-width: 960px;
 	overflow-x: hidden; /* prevents box-shadow causing a horizontal scrollbar in firefox when viewport < 960px wide */
@@ -48,7 +49,7 @@ body {
 }
 
 #grailsLogo {
-	background-color: #abbf78;
+	background-color: #00b7e5;
 }
 
 /* replace with .no-boxshadow body if you have modernizr available */
@@ -65,7 +66,7 @@ body {
 }
 
 a:link, a:visited, a:hover {
-	color: #48802c;
+	color: #00ccff;
 }
 
 a:hover, a:active {
@@ -73,10 +74,18 @@ a:hover, a:active {
 }
 
 h1 {
-	color: #48802c;
+	color: #F8F8F8;
 	font-weight: normal;
 	font-size: 1.25em;
 	margin: 0.8em 0 0.3em 0;
+}
+
+h2 {
+	font-weight: bold;
+}
+
+h3 {
+	color: #00ccff;
 }
 
 ul {
@@ -98,7 +107,7 @@ img {
 }
 
 .content h1 {
-	border-bottom: 1px solid #CCCCCC;
+	border-bottom: 1px solid #00ccff;
 	margin: 0.8em 1em 0.3em;
 	padding: 0 0.25em;
 }
@@ -108,7 +117,7 @@ img {
 }
 
 .footer {
-	background: #abbf78;
+	background: #00b7e5;
 	color: #000;
 	clear: both;
 	font-size: 0.8em;
@@ -168,7 +177,7 @@ img {
 }
 
 .nav a:active, .nav a:visited {
-	color: #666666;
+	color: #00ccff;
 }
 
 .nav a:focus, .nav a:hover {
@@ -225,7 +234,7 @@ fieldset,
 
 .fieldcontain label,
 .fieldcontain .property-label {
-	color: #666666;
+	color: #00ccff;
 	text-align: right;
 	width: 25%;
 }
@@ -243,11 +252,12 @@ label {
 	cursor: pointer;
 	display: inline-block;
 	margin: 0 0.25em 0 0;
+	color: #00ccff;
 }
 
 input, select, textarea {
 	background-color: #fcfcfc;
-	border: 1px solid #cccccc;
+	border: 1px solid #00ccff;
 	font-size: 1em;
 	padding: 0.2em 0.4em;
 }
@@ -283,7 +293,7 @@ input:focus, select:focus, textarea:focus {
 }
 
 .required-indicator {
-	color: #48802C;
+	color: #e5f9ff;
 	display: inline-block;
 	font-weight: bold;
 	margin-left: 0.3em;
@@ -385,9 +395,9 @@ fieldset.embedded legend {
 /* same effects for browsers that support HTML5 client-side validation (these have to be specified separately or IE will ignore the entire rule) */
 
 input:invalid, select:invalid, textarea:invalid {
-	background: #fff3f3;
-	border-color: #ffaaaa;
-	color: #cc0000;
+	background: #e5fff7;
+	border-color: #00ffb2;
+	color: #00ffb2;
 }
 
 input:invalid:focus, select:invalid:focus, textarea:invalid:focus {
@@ -536,7 +546,7 @@ th:hover, tr:hover {
 .buttons a {
 	background-color: transparent;
 	border: 0;
-	color: #666666;
+	color: #00ccff;
 	cursor: pointer;
 	display: inline-block;
 	margin: 0 0.25em 0;
@@ -563,7 +573,7 @@ th:hover, tr:hover {
 .no-borderradius .buttons input:hover, .no-borderradius .buttons input:focus,
 .no-borderradius .buttons a:hover, .no-borderradius .buttons a:focus {
 	background-color: transparent;
-	color: #444444;
+	color: #00b7e5;
 	text-decoration: underline;
 }
 
@@ -593,4 +603,12 @@ th:hover, tr:hover {
 a.skip {
 	position: absolute;
 	left: -9999px;
+}
+
+.transparent {
+	width: 50%;
+	float: left;
+	background: rgb(255, 255, 255); /* Fall-back for browsers that don't
+                                    support rgba */
+    background: rgba(255, 255, 255, .5);
 }

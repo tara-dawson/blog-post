@@ -38,7 +38,7 @@ class PostController {
 	}
 	
 	def show = {
-		def post = Post.get(params.id)
+		def post = Post.findByTitle(params.title.replaceAll("%20"," "))
 		render(view:'show', model:['postInstance':post])
 	}
 

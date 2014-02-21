@@ -1,6 +1,6 @@
 <%@ page import="blog.post.Post" %>
 
-
+<div class="transparent">
 
 <div class="fieldcontain ${hasErrors(bean: postInstance, field: 'title', 'error')} required">
 	<label for="title">
@@ -40,4 +40,5 @@
 		
 	</label>
 	<g:checkBox name="published" value="${postInstance?.published}" />
+</div>
 </div>
