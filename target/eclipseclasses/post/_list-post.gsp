@@ -21,6 +21,7 @@
   	Edit this post<br />
 	</g:link>
 	<br />
+	<br>
 
 </g:each>
 </table>

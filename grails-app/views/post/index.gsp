@@ -11,12 +11,15 @@
 	  <h1 style="font-size:30px; font-weight:bold;">Posts</h1>
 		<div class="nav" role="navigation">
 			<ul>
-				<li><a class="home" href="${createLink(uri: '/')}"><g:message code="default.home.label"/></a></li>
+			<fieldset class="buttons">
 				<li><g:link class="create" action="create"><g:message code="default.new.label" args="[entityName]" /></g:link></li>
+			</fieldset>
 			</ul>
 		</div>
 		<br>
+		<fieldset class="buttons">
 		<div class="search">
+		
 		<g:formRemote name="search"
 		url="[controller:'post',action:'search']"
 		update="list-post">
@@ -32,5 +35,6 @@
 			</g:if>
 			<g:render template="/post/list-post" model="['postInstanceList':postInstanceList]"/>
 		</div>
+	</fieldset>
 	</body>
 </html>

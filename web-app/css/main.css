@@ -1,7 +1,7 @@
 /* FONT STACK */
 body,
 input, select, textarea {
-	font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+	font-family: Frutiger, "Frutiger Linotype", Univers, Calibri, "Gill Sans", "Gill Sans MT", "Myriad Pro", Myriad, "DejaVu Sans Condensed", "Liberation Sans", "Nimbus Sans L", Tahoma, Geneva, "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -37,15 +37,17 @@ html * {
 }
 
 body {
+	display: block;
+	height: auto;
 	background: url(http://www.ourprg.com/wp-content/uploads/2012/08/snow_leopard-1280x720.jpg) no-repeat right center fixed;
 	background-color: #00b7e5;
 	color: black;
 	margin: 0 auto;
 	max-width: 960px;
 	overflow-x: hidden; /* prevents box-shadow causing a horizontal scrollbar in firefox when viewport < 960px wide */
-	   -moz-box-shadow: 0 0 0.3em #255b17;
-	-webkit-box-shadow: 0 0 0.3em #255b17;
-	        box-shadow: 0 0 0.3em #255b17;
+	   -moz-box-shadow: 0 0 0.3em #00b7e5;
+	-webkit-box-shadow: 0 0 0.3em #00b7e5;
+	        box-shadow: 0 0 0.3em #00b7e5;
 }
 
 #grailsLogo {
@@ -56,7 +58,7 @@ body {
 .ie6 body,
 .ie7 body,
 .ie8 body {
-	border-color: #255b17;
+	border-color: #00b7e5;
 	border-style: solid;
 	border-width: 0 1px;
 }
@@ -71,6 +73,16 @@ a:link, a:visited, a:hover {
 
 a:hover, a:active {
 	outline: none; /* prevents outline in webkit on active links but retains it for tab focus */
+		background-color: #00ffb2;
+	color: #ffffff;
+	outline: none;
+	text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.8);
+	   -moz-box-shadow: none;
+	-webkit-box-shadow: none;
+	        box-shadow: none;
+	        	-webkit-border-radius: 40px;
+	-mox-border-radius: 40px;
+	border-radius: 40px;
 }
 
 h1 {
@@ -98,10 +110,7 @@ img {
 
 /* GENERAL */
 
-#grailsLogo a {
-	display: inline-block;
-	margin: 1em;
-}
+
 
 .content {
 }
@@ -126,9 +135,6 @@ img {
 	min-height: 1em;
 }
 
-.footer a {
-	color: #255b17;
-}
 
 .spinner {
 	background: url(../images/spinner.gif) 50% 50% no-repeat transparent;
@@ -141,16 +147,7 @@ img {
 	text-indent: -9999px;
 }
 
-/* NAVIGATION MENU */
-
-.nav {
-	background-color: #efefef;
-	padding: 0.5em 0.75em;
-	   -moz-box-shadow: 0 0 3px 1px #aaaaaa;
-	-webkit-box-shadow: 0 0 3px 1px #aaaaaa;
-	        box-shadow: 0 0 3px 1px #aaaaaa;
-	zoom: 1;
-}
+ NAVIGATION MENU 
 
 .nav ul {
 	overflow: hidden;
@@ -167,13 +164,16 @@ img {
 }
 
 .nav a {
-	color: #666666;
-	display: block;
-	padding: 0.25em 0.7em;
-	text-decoration: none;
-	   -moz-border-radius: 0.3em;
-	-webkit-border-radius: 0.3em;
-	        border-radius: 0.3em;
+	background-color: transparent;
+	overflow: hidden;
+	padding: 0.3em;
+	-webkit-border-radius: 40px;
+	-mox-border-radius: 40px;
+	border-radius: 40px;
+	   -moz-box-shadow: 0 0 3px 1px #aaaaaa;
+	-webkit-box-shadow: 0 0 3px 1px #aaaaaa;
+	        box-shadow: 0 0 3px 1px #aaaaaa;
+	margin: 1em 0 0 0;
 }
 
 .nav a:active, .nav a:visited {
@@ -181,34 +181,36 @@ img {
 }
 
 .nav a:focus, .nav a:hover {
-	background-color: #999999;
+	background-color: #00ffb2;
 	color: #ffffff;
 	outline: none;
 	text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.8);
 }
 
 .no-borderradius .nav a:focus, .no-borderradius .nav a:hover {
-	background-color: transparent;
-	color: #444444;
-	text-decoration: underline;
+	background-color: #00ffb2;
+	color: #ffffff;
+	outline: none;
+	text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.8);
+	   -moz-box-shadow: none;
+	-webkit-box-shadow: none;
+	        box-shadow: none;
+	        	-webkit-border-radius: 40px;
+	-mox-border-radius: 40px;
+	border-radius: 40px;
 }
 
-.nav a.home, .nav a.list, .nav a.create {
-	background-position: 0.7em center;
-	background-repeat: no-repeat;
-	text-indent: 25px;
-}
-
-.nav a.home {
-	background-image: url(../images/skin/house.png);
-}
-
-.nav a.list {
-	background-image: url(../images/skin/database_table.png);
-}
-
-.nav a.create {
-	background-image: url(../images/skin/database_add.png);
+.nav a.list, .nav a.create {
+	background-color: gray;
+	overflow: hidden;
+	padding: 0.3em;
+	-webkit-border-radius: 40px;
+	-mox-border-radius: 40px;
+	border-radius: 40px;
+	   -moz-box-shadow: 0 0 3px 1px #aaaaaa;
+	-webkit-box-shadow: 0 0 3px 1px #aaaaaa;
+	        box-shadow: 0 0 3px 1px #aaaaaa;
+	margin: 1em 0 0 0;
 }
 
 /* CREATE/EDIT FORMS AND SHOW PAGES */
@@ -271,6 +273,7 @@ select[multiple] {
 }
 
 textarea {
+
 	width: 250px;
 	height: 150px;
 	overflow: auto; /* IE always renders vertical scrollbar without this */
@@ -469,13 +472,6 @@ th.sortable a {
 	padding-right: 1.1em;
 }
 
-th.asc a {
-	background-image: url(../images/skin/sorted_asc.gif);
-}
-
-th.desc a {
-	background-image: url(../images/skin/sorted_desc.gif);
-}
 
 .odd {
 	background: #f7f7f7;
@@ -486,20 +482,22 @@ th.desc a {
 }
 
 th:hover, tr:hover {
-	background: #E1F2B6;
+	background: #00ffb2;
 }
 
 /* PAGINATION */
 
 .pagination {
-	border-top: 0;
-	margin: 0;
-	padding: 0.3em 0.2em;
-	text-align: center;
-	   -moz-box-shadow: 0 0 3px 1px #AAAAAA;
-	-webkit-box-shadow: 0 0 3px 1px #AAAAAA;
-	        box-shadow: 0 0 3px 1px #AAAAAA;
-	background-color: #EFEFEF;
+	background-color: transparent;
+	color: #ffffff;
+	outline: none;
+	text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.8);
+	   -moz-box-shadow: none;
+	-webkit-box-shadow: none;
+	        box-shadow: none;
+	        	-webkit-border-radius: 40px;
+	-mox-border-radius: 40px;
+	border-radius: 40px;
 }
 
 .pagination a,
@@ -516,7 +514,7 @@ th:hover, tr:hover {
 
 .pagination a:hover, .pagination a:focus,
 .pagination .currentStep {
-	background-color: #999999;
+	background-color: #00ffb2;
 	color: #ffffff;
 	outline: none;
 	text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.8);
@@ -525,26 +523,23 @@ th:hover, tr:hover {
 .no-borderradius .pagination a:hover, .no-borderradius .pagination a:focus,
 .no-borderradius .pagination .currentStep {
 	background-color: transparent;
-	color: #444444;
+	color: #00ffb2;
 	text-decoration: underline;
 }
 
 /* ACTION BUTTONS */
 
 .buttons {
-	background-color: #efefef;
+	background-color: transparent;
 	overflow: hidden;
 	padding: 0.3em;
-	   -moz-box-shadow: 0 0 3px 1px #aaaaaa;
-	-webkit-box-shadow: 0 0 3px 1px #aaaaaa;
-	        box-shadow: 0 0 3px 1px #aaaaaa;
-	margin: 0.1em 0 0 0;
 	border: none;
+	margin: 1em 0 0 0;
 }
 
 .buttons input,
 .buttons a {
-	background-color: transparent;
+	background-color: gray;
 	border: 0;
 	color: #00ccff;
 	cursor: pointer;
@@ -553,28 +548,37 @@ th:hover, tr:hover {
 	overflow: visible;
 	padding: 0.25em 0.7em;
 	text-decoration: none;
-
-	   -moz-border-radius: 0.3em;
-	-webkit-border-radius: 0.3em;
-	        border-radius: 0.3em;
+		-webkit-border-radius: 40px;
+	-mox-border-radius: 40px;
+	border-radius: 40px;
 }
 
 .buttons input:hover, .buttons input:focus,
 .buttons a:hover, .buttons a:focus {
-	background-color: #999999;
+	background-color: #00ffb2;
 	color: #ffffff;
 	outline: none;
 	text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.8);
 	   -moz-box-shadow: none;
 	-webkit-box-shadow: none;
 	        box-shadow: none;
+	        	-webkit-border-radius: 40px;
+	-mox-border-radius: 40px;
+	border-radius: 40px;
 }
 
 .no-borderradius .buttons input:hover, .no-borderradius .buttons input:focus,
 .no-borderradius .buttons a:hover, .no-borderradius .buttons a:focus {
-	background-color: transparent;
-	color: #00b7e5;
-	text-decoration: underline;
+	background-color: #00ffb2;
+	color: #ffffff;
+	outline: none;
+	text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.8);
+	   -moz-box-shadow: none;
+	-webkit-box-shadow: none;
+	        box-shadow: none;
+	        	-webkit-border-radius: 40px;
+	-mox-border-radius: 40px;
+	border-radius: 40px;
 }
 
 .buttons .delete, .buttons .edit, .buttons .save {
@@ -586,18 +590,6 @@ th:hover, tr:hover {
 .ie6 .buttons input.delete, .ie6 .buttons input.edit, .ie6 .buttons input.save,
 .ie7 .buttons input.delete, .ie7 .buttons input.edit, .ie7 .buttons input.save {
 	padding-left: 36px;
-}
-
-.buttons .delete {
-	background-image: url(../images/skin/database_delete.png);
-}
-
-.buttons .edit {
-	background-image: url(../images/skin/database_edit.png);
-}
-
-.buttons .save {
-	background-image: url(../images/skin/database_save.png);
 }
 
 a.skip {

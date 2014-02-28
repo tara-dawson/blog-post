@@ -13,14 +13,14 @@
 
 	<div class="nav" role="navigation">
 		<ul>
-			<li><a class="home" href="${createLink(uri: '/')}"><g:message
-						code="default.home.label" /></a></li>
+		<fieldset class="buttons">
 			<li><g:link class="list" action="index">
 					<g:message code="default.list.label" args="[entityName]" />
 				</g:link></li>
 			<li><g:link class="create" action="create">
 					<g:message code="default.new.label" args="[entityName]" />
 				</g:link></li>
+		</fieldset>
 		</ul>
 	</div>
 	<div id="show-post" class="content scaffold-show transparent" role="main">
@@ -87,7 +87,9 @@
 			<label>Comment: </label>
 			<textarea name='comment' rows="2" value="${comment}">
 			</textarea><br>
+			<fieldset class="buttons">
 			<g:submitButton name="Submit" />
+			</fieldset>
 		</g:formRemote><br><br>
 
 	<div id="comments"><g:render template="/comment/comments" model="['comments':postInstance?.comments]"/>

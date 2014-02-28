@@ -26,6 +26,11 @@
 	    	font-size: 12px;
 	  		}
 		}
+		@media screen and (max-width: 720px) {
+			img.smallResolution{
+				min-height: 150px;
+			}
+		}
 		</style>
 		
 		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
